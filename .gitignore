@@ -4,3 +4,4 @@
 /dist/
 /esm/
 /cjs/
+.DS_Store

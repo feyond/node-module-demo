@@ -124,8 +124,18 @@ export default {
 }
 
 ```
-### 4.3 编译
+### 4.3 编译 - `rollup`
 
+- 安装
+```
+npm install -D rollup \
+rollup-plugin-terser \
+rollup-plugin-delete \
+@rollup/plugin-node-resolve \
+@rollup/plugin-babel \
+@rollup/plugin-commonjs \
+@rollup/plugin-typescript
+```
 
 ## 5. `npm publish`
 ```shell
