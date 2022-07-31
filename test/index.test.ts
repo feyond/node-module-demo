@@ -1,5 +1,4 @@
-import {add} from "add";
-import {subtract} from "subtract";
+import {add, subtract} from "../src";
 
 describe("测试集合", () => {
     test('adds 1 + 2 to equal 3', () => {

@@ -134,8 +134,9 @@ rollup-plugin-delete \
 @rollup/plugin-node-resolve \
 @rollup/plugin-babel \
 @rollup/plugin-commonjs \
-@rollup/plugin-typescript
+@rollup/plugin-typescript tslib \
 ```
+使用`@rollup/plugin-replace` 代替 `@rollup/plugin-json`
 
 ## 5. `npm publish`
 ```shell
@@ -159,3 +160,19 @@ npm version minor
 ```shell
 npm version major
 ```
+
+## 6. FAQ
+1. Error: Unexpected token (Note that you need plugins to import files that are not JavaScript)
+  - 解决方案1: 增加`tsconfig.json`配置
+  ```json lines
+  {
+    "compilerOptions": {
+      "rootDir": "./src",
+    }
+  }
+  ```
+  - 解决方案2: 删除`tsconfig.json`以下几个项 
+    - `outDir`
+    - `declarationDir`
+    - `declaration`
+2. 
