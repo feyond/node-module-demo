@@ -1,7 +1,7 @@
 {
-  "name": "@feyond/node-module-demo",
+  "name": "{{name}}",
   "version": "1.0.0",
-  "description": "Chrome Messaging Wrapper",
+  "description": "{{description}}",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "typings": "./lib/index.d.ts",
@@ -11,9 +11,9 @@
   ],
   "scripts": {
     "build": "rollup -c && npm run build:types",
-    "build:all": "npm run build:types && npm run build:cjs && npm run build:esm",
-    "build:esm": "tsc -p tsconfig.esm.json",
-    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "tsc:all": "npm run build:types && npm run build:cjs && npm run build:esm",
+    "tsc:esm": "tsc -p tsconfig.esm.json",
+    "tsc:cjs": "tsc -p tsconfig.cjs.json",
     "build:types": "tsc --declaration --emitDeclarationOnly --outDir ./lib",
     "prepublish": "npm run build",
     "test": "jest"
@@ -24,7 +24,7 @@
     "chrome",
     "messaging"
   ],
-  "author": "feyond",
+  "author": "{{author}}",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-babel": "^5.3.1",
