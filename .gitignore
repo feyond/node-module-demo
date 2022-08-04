@@ -5,3 +5,4 @@
 /esm/
 /cjs/
 .DS_Store
+package-lock.json

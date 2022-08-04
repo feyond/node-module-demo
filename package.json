@@ -1,7 +1,7 @@
 {
-  "name": "{{name}}",
+  "name": "node-module-template",
   "version": "1.0.0",
-  "description": "{{description}}",
+  "description": "node module template testing",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "typings": "./lib/index.d.ts",
@@ -24,7 +24,7 @@
     "chrome",
     "messaging"
   ],
-  "author": "{{author}}",
+  "author": "feyond",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-babel": "^5.3.1",
