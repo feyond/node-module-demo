@@ -6,6 +6,7 @@
   "module": "./lib/esm/index.js",
   "typings": "./lib/index.d.ts",
   "browser": "./lib/index.js",
+  "type": "module",
   "files": [
     "lib/"
   ],
@@ -21,10 +22,6 @@
     "lint:fix": "eslint --fix --ext .ts"
   },
   "keywords": [
-    "chrome",
-    "messaging",
-    "chrome",
-    "messaging"
   ],
   "author": "{{author}}",
   "license": "ISC",
@@ -44,6 +41,7 @@
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "ts-jest": "^28.0.7",
+    "ts-node": "^10.9.1",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
   }

@@ -1,4 +1,3 @@
-// import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
 import pkg from './package.json';
 import cjs from './tsconfig.cjs.json';
@@ -36,12 +35,11 @@ export default {
             ..._output,
             file: pkg.browser,
             format: 'iife',
-            name: pkg.name.replace(`@${pkg.author}/`, "").replace("-", "_").replace("\-", "_")
+            name: pkg.name.replace(/^@.*\//, "").replace("-", "_").replace(".", "_")
         },
     ],
     plugins: [
         del({ targets: ['lib/*'], runOnce: true, verbose: true }),
-        // json(),
         typescript(),
         resolve(),
         commonjs(),
