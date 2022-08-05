@@ -137,7 +137,15 @@ rollup-plugin-delete \
 @rollup/plugin-typescript tslib \
 ```
 使用`@rollup/plugin-replace` 代替 `@rollup/plugin-json`
-
+### 4.4 `Eslint`
+- 安装
+```
+npm i -D eslint \
+@typescript-eslint/eslint-plugin \
+@typescript-eslint/parser \
+eslint-config-prettier \
+eslint-plugin-prettier
+```
 ## 5. `npm publish`
 ```shell
 npm publish --access public

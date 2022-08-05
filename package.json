@@ -1,7 +1,7 @@
 {
-  "name": "node-module-template",
+  "name": "{{name}}",
   "version": "1.0.0",
-  "description": "node module template testing",
+  "description": "{{description}}",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "typings": "./lib/index.d.ts",
@@ -16,7 +16,9 @@
     "tsc:cjs": "tsc -p tsconfig.cjs.json",
     "build:types": "tsc --declaration --emitDeclarationOnly --outDir ./lib",
     "prepublish": "npm run build",
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint --ext .ts",
+    "lint:fix": "eslint --fix --ext .ts"
   },
   "keywords": [
     "chrome",
@@ -24,7 +26,7 @@
     "chrome",
     "messaging"
   ],
-  "author": "feyond",
+  "author": "{{author}}",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-babel": "^5.3.1",
@@ -32,6 +34,11 @@
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.4",
     "@types/jest": "^28.1.6",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "jest": "^28.1.3",
     "rollup": "^2.77.2",
     "rollup-plugin-delete": "^2.0.0",
